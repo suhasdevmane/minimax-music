@@ -30,7 +30,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SONGS = ROOT / "songs"
-PY = ROOT / ".venv" / "Scripts" / "python.exe"
 REF = SONGS / "01-fire-in-the-rain" / "caption.txt"
 CATALOGUE = SONGS / "CATALOGUE.md"
 REF_MALE = (SONGS / "101-the-day-you-found-me" / "caption.txt")

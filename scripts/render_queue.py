@@ -19,7 +19,10 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PY = ROOT / ".venv" / "Scripts" / "python.exe"
+# The interpreter running this script, so the subprocesses below inherit the
+# same virtualenv. Hardcoding .venv/Scripts/python.exe worked on Windows and
+# broke on Linux, where the venv puts it at .venv/bin/python.
+PY = Path(sys.executable)
 STATUS = ROOT / "render_queue.status"
 TODO = ROOT / "TODO.md"
 VOICE_REF = ROOT / "songs" / "01-fire-in-the-rain"
