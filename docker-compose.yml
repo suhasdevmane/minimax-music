@@ -1,0 +1,45 @@
+# Render service for the song catalogue.
+#
+#   docker compose up --build          # fetch weights on first start, then render
+#   docker compose run --rm render python scripts/render_pending.py --list
+#   docker compose logs -f render
+#
+# First start downloads about 54 GB of weights into the `models` volume.
+# Later starts reuse it. Each song takes roughly two hours on one RTX 4090.
+#
+# No Docker on the target host? Use scripts/bootstrap.sh instead; it does the
+# same setup in a plain virtualenv with no root and no container runtime.
+
+services:
+  render:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    image: minimax-music:latest
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      MINIMAX_MODEL_DIR: /models/minimax_ttm
+      HF_HOME: /models/hf
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      # Weights persist here across rebuilds, so the 54 GB download is paid once.
+      - models:/models
+      # Songs are bind-mounted so finished audio lands on the host, outside the
+      # container, and survives `down`.
+      - ./songs:/app/songs
+    # Keep rendering through a host reboot or a crash mid-queue.
+    restart: unless-stopped
+    # Requires the NVIDIA container runtime on the host. Drop this block to
+    # inspect the catalogue without a GPU; renders need it.
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+volumes:
+  models:

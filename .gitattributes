@@ -1,0 +1,10 @@
+# Normalise line endings in the repo so a Windows laptop and a Linux server
+# agree. This matters here: scripts/audit_catalogue.py checks that each
+# README's fenced lyric block is byte-identical to its lyrics.txt, and a
+# mixed-ending checkout would fail that check on one platform only.
+* text=auto
+
+# Rendered audio is not tracked at all (see .gitignore), so there are no
+# Git LFS filters. If you ever do decide to track a reference render, add
+# an LFS rule for that one path rather than for *.wav.
+*.pdf binary

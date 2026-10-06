@@ -1,0 +1,4 @@
+{
+  "wpm": 140,
+  "note": "Uptempo class because of the two male rap verses (100 BPM hip-hop pop). Ballads measured 116-153 wpm; the rap verses will pace far faster. 140 is a conservative blended estimate used by verify_lyrics.py for the length guard. If the outro truncates on the first render, drop the second post-chorus and re-render."
+}

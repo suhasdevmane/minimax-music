@@ -1,0 +1,4 @@
+{
+  "wpm": 140,
+  "note": "First uptempo song (136 BPM, male rap + female pop). Ballads measured 116-153 wpm; rap at 136 BPM will pace faster. 140 is a deliberately conservative estimate; verify_lyrics.py uses this instead of the 116 default. Unmeasured until the first render - if the outro truncates, drop the second post-chorus and re-render."
+}

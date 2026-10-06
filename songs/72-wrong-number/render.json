@@ -1,0 +1,4 @@
+{
+  "wpm": 140,
+  "note": "Uptempo (120 BPM) UK pop-rap with two rapped verses and a chanted post-chorus. Ballads measured 116-153 wpm; this will pace faster. 140 is a conservative estimate used by verify_lyrics.py for the length guard. If the outro truncates on the first render, drop the second post-chorus and re-render."
+}

@@ -1,0 +1,43 @@
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Model weights, 54 GB. Fetched by scripts/fetch_model.py, which the
+# container entrypoint and scripts/bootstrap.sh both run on first start.
+minimax_ttm/
+
+# Hugging Face cache, if anyone points it inside the repo
+.cache/
+hf_home/
+
+# Rendered audio and video. These are outputs, not sources: every one is
+# reproducible from the song's caption.txt + lyrics.txt at seed 42. Keeping
+# them out holds the clone at a few megabytes instead of about a gigabyte,
+# and avoids Git LFS quota entirely. The .json sidecar beside each render
+# IS tracked, so the seed, caption and library versions stay in history.
+*.wav
+*.mp3
+*.flac
+*.m4a
+*.ogg
+*.mp4
+*.mov
+
+# Runtime state and logs
+*.log
+render_queue.status
+*.npy
+
+# Secrets. .env.example is tracked; .env never is.
+.env
+.env.*
+!.env.example
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

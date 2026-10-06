@@ -1,0 +1,19 @@
+.git
+.venv
+venv
+__pycache__
+*.pyc
+
+# Never send the 54 GB of weights into the build context. The image fetches
+# them at first start into a mounted volume instead.
+minimax_ttm/
+
+# Outputs
+*.wav
+*.mp3
+*.mp4
+*.npy
+*.log
+render_queue.status
+
+.env
