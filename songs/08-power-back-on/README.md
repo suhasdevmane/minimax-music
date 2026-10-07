@@ -183,10 +183,23 @@ Soft heart, strong mind, steady feet,
 Peace in my head with a fire in my beat.
 
 [pre-chorus]
-(repeat)
+Feel that pulse beneath the pain,
+That's not weakness, that's your name.
+If the night says, you can't go on,
+Turn your hurt into a power song.
+Breathe in. Lock in. Rise up.
 
 [chorus]
-(repeat)
+Power back on, power back on,
+I was down, but I was never gone.
+Turn the pressure into pulse,
+Turn the fear into muscle.
+I don't need luck, I don't need saving,
+I've got a heart that keeps creating.
+Power back on, power back on,
+When the world goes dark, I become the dawn.
+One more rep, one more run,
+Power back on, I'm not done.
 
 [instrumental]
 
@@ -215,12 +228,6 @@ When the world goes dark, I become the dawn.
 One more rep, one more run,
 Power back on, I'm not done.
 
-[post-chorus]
-Not done. Not done.
-Still here. Still strong.
-Power back on.
-Power back on.
-
 [outro]
 I was down,
 But I was never gone.
@@ -230,12 +237,27 @@ Power back on.
 Power back on.
 ```
 
+## Fixed 2026-10-07: outro truncated on the first render
+
+The risk this README flagged before rendering came true. The first render
+hit the 355-second duration cap exactly (355.5s measured) with no fade on
+the final half-second, unlike every other song in the batch, which all
+end on a natural decay well short of the cap. The final post-chorus and
+outro were almost certainly cut short.
+
+Fix applied, exactly as planned above: the second `[post-chorus]` (the
+repeat right before the outro) is dropped from `lyrics.txt`. Words went
+781 → 767, pushing the estimate from 93% to 91% of the frame cap. Nothing
+else changed. The truncated take is kept at
+`output/truncated-355s-cap/power_back_on.wav` for comparison; the song is
+queued to re-render.
+
 ## Budget (verified)
 
 | Check | Result |
 |---|---|
-| Sung words | 781 at 140 wpm → ~5.6 min, 93% of frame cap (see the pacing table above) |
-| Caption + lyrics tokens | 2476 of 5000 |
+| Sung words | 767 at 140 wpm → ~5.5 min, 91% of frame cap (see the pacing table above) |
+| Caption + lyrics tokens | 2450 of 5000 |
 | Section tags alone on their lines | yes |
 | Stage directions in lyric body | none |
 | Character name in lyrics | none |

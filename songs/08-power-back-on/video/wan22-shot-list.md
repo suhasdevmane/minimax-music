@@ -218,21 +218,14 @@ edit over a still-lit plate.
 112. *"One more rep, one more run"* — hold on the two-shot, breathing settling.
 113. *"Power back on, I'm not done"* — cut to a very wide aerial: the once-dark city glowing in full sunrise.
 
-### Post-chorus 2 — chant
-
-114. *"Not done. Not done."* — the fist; the shoe strike (reprise, sunlit).
-115. *"Still here. Still strong."* — sweat flying; the city, lit.
-116. *"Power back on."* — the two back-to-back, now in sunlight on the bridge.
-117. *"Power back on."* — hold, the crowd around them.
-
 ### Outro — the wall, lit
 
-118. *"I was down"* — return to the opening close-up: the neon wall, now fully illuminated, Mahima's palm lifting away from it, macro.
-119. *"But I was never gone"* — her turning and walking away into morning light through the open doors, wide.
-120. *"Take your time."* — Kai following at a distance, unhurried, the key swinging on its cord.
-121. *"Then turn your power back on."* — both joining the wider group outside in the sun, medium.
-122. *"Power back on."* — the powered city skyline at sunrise, slow drift.
-123. *"Power back on."* — fade out on the skyline, the sound of one steady calm breath. No text.
+114. *"I was down"* — return to the opening close-up: the neon wall, now fully illuminated, Mahima's palm lifting away from it, macro.
+115. *"But I was never gone"* — her turning and walking away into morning light through the open doors, wide.
+116. *"Take your time."* — Kai following at a distance, unhurried, the key swinging on its cord.
+117. *"Then turn your power back on."* — both joining the wider group outside in the sun, medium.
+118. *"Power back on."* — the powered city skyline at sunrise, slow drift.
+119. *"Power back on."* — fade out on the skyline, the sound of one steady calm breath. No text.
 
 ## 5. Edit and the cuts
 
