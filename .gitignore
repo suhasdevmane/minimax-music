@@ -26,6 +26,17 @@ hf_home/
 *.mp4
 *.mov
 
+# Songs 01-111 are finished and archived locally, so they stay out of the
+# repo. Each pattern needs the hyphen after the number, so songs 112 onward
+# are never matched: 01-09, 10-99, 100-109, 110-111.
+songs/0[1-9]-*/
+songs/[1-9][0-9]-*/
+songs/10[0-9]-*/
+songs/11[01]-*/
+
+# Local archives, e.g. the server copy of songs 01-111
+backups/
+
 # Runtime state and logs
 *.log
 render_queue.status
